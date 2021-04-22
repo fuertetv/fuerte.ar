@@ -1,0 +1,76 @@
+html { font-size: 0.9rem; }
+body { padding: 0; font-family: sans-serif; -webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale; background-color: blue; }
+ 
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+
+
+/* ----------------------------------------------------------------
+
+GENERAL
+
+---------------------------------------------------------------- */
+.wrap {
+position: absolute; 
+  left: 0; 
+  right: 0; 
+    top:45%;
+  margin-left: 2rem; 
+  margin-right: auto; 
+  width: 50%; /* Need a specific value to work */}
+
+.footer {padding: 0.5rem; margin: 1rem 0; background-color: #fff; }
+.footer p {}
+
+.splash {background-color: #111; color:#fff; padding: 1rem 2rem; }
+a.ig {margin: 0 0 0 1rem; color: #fff; padding: 1rem 1rem; text-decoration: none; border-bottom: solid 1px #fff;}
+a.ig:hover {color:#111; text-decoration: none; border-bottom: solid 1px #111; }
+/* ----------------------------------------------------------------
+
+MOBILE STUFF!
+
+---------------------------------------------------------------- */
+
+
+
+/* On screens that are 600px or less set the grid to 1 column */
+@media screen and (max-width: 600px) {
+    body {font-size: 2rem;}
+ .grid {
+     
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); 
+
+
+ }
+    
+}
+
+
+
+
+/* On screens that are 900px or less set the grid to 1 column */
+@media (max-width: 900px) {
+        body {font-size: 2rem;}
+
+   .grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+ }
+    
+
+}
+
+
+
