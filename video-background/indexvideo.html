@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fuerte TV - Live Visuals  & Design </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+     <script src="simplemenu.js"> </script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+}
+    nav {  position: fixed; font-size: 0.85rem; 
+top:0;
+  background: rgba(0, 0, 0, 0.0);
+  color: #f1f1f1;
+  width: 100%;
+ padding: 20px; /* background-color: blue;*/}
+    
+#myVideo {
+   object-fit: cover;
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+    
+    
+    
+    
+    a.link
+{
+    position: relative;
+    padding:0 0 4px 0;
+    text-decoration: none;
+    color:#fff;}
+
+a.link:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+    a.link:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+    hr {height: 1px; background-color:#fff; border: none; opacity: 0.4; margin: 1.2rem 0 0.7rem 0;}
+.bottom {position: absolute; bottom: 2rem; width: 97%;}
+    .spacer-50 {width: 50%; float: left; display: block; margin-top: 3rem;}
+    .logo {float:left; display: block; /*border-bottom: solid 1px #fff; padding: 0 0 0.75rem 0;*/ }
+/* --------------------------------------------------------------------------------------------
+
+MENU
+
+--------------------------------------------------------------------------------------------
+
+*/
+
+
+.top-animate {
+  background: #fff !important;
+  top: 13px !important;
+  -webkit-transform: rotate(45deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
+
+.mid-animate { opacity: 0; }
+
+.bottom-animate {
+  background: #fff !important;
+  top: 13px !important;
+  -webkit-transform: rotate(-225deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(-225deg);
+}
+
+.top-menu {
+  top: 5px;
+  width: 25px;
+  height: 1px;
+  border-radius: 10px;
+  background-color: #F9A530;
+}
+
+.mid-menu {
+  top: 13px;
+  width: 25px;
+  height: 1px;
+  border-radius: 10px;
+  background-color: #F9A530;
+}
+
+.bottom-menu {
+  top: 21px;
+  width: 25px;
+  height: 1px;
+  border-radius: 10px;
+  background-color: #F9A530;
+}
+
+.menui {
+  background: #fff;
+  transition: 0.6s ease;
+  transition-timing-function: cubic-bezier(.75, 0, .29, 1.01);
+  margin-top: 10px;
+  position: absolute;
+}
+
+.icon {
+  z-index: 999;
+  position: fixed;
+  /*    background: rgba(0, 0, 0, 0.21);*/
+  display: block;
+  padding: 9px;
+  height: 32px;
+  width: 32px;
+  margin: 0px;
+  top: 0;
+  right: 1rem;
+}
+
+.mobilenav {
+  /*    top: 47px !important;*/
+  font-family: inherit;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: blue;
+  opacity: 1;
+    padding: 0 1rem;
+   
+}
+
+.mobilenav li {
+  list-style-type: none;
+  text-align: left;
+  margin: 0.3rem 0 0 0;
+}
+
+.mobilenav li a {
+  font-size: 1.75rem;
+  color: #fff;
+  text-decoration: none;
+ font-weight: 100;
+  width: 100%;
+    padding: 0 0 0.1rem 0;
+    
+}
+
+.mobilenav li a:hover {}
+
+.mobilenav li:first-child { margin-top: 1rem; }
+    
+    
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="rain.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+<nav>
+    <div class="logo">
+    Fuerte TV<br> Live Visuals & Design
+    </div>
+    
+      <div class="mobilenav"> 
+
+  <li><a href="#" class="link">Work</a></li> 
+  <li><a href="#" class="link">Random</a></li> 
+  <li><a href="infos.html" class="link">Infos</a></li> 
+
+          
+         <div class="bottom">
+          <hr>
+             <p>Get in touch<br>
+                 <a href="infos.html" class="link">studio@fuertetv.com</a>
+             </p>
+             
+              <hr>
+             <div class="spacer-50"><a href="infos.html" class="link">Instagram</a> </div>
+              <div class="spacer-50"><a href="infos.html" class="link">Twitter</a> </div>
+          </div>
+</div> 
+
+        <!-- THIS IS THE ICON --> 
+
+        <a href="javascript:void(0)" class="icon"> 
+           <div class="hamburger"> 
+             <div class="menui top-menu"></div> 
+             <div class="menui mid-menu"></div> 
+             <div class="menui bottom-menu"></div> 
+           </div> 
+        </a>
+       
+      
+       
+     </nav>
+    
+    
+    
+
+<!--
+<div class="content">
+  <h1>Heading</h1>
+  <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+-->
+
+
+
+</body>
+</html>
